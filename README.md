@@ -1,5 +1,5 @@
 # space-chase
-Source code for Space Chase
+Source code for Space Chase. Made with [Godot](https://godotengine.org)
 ## play it on:
-  * [my website](rathippo.sh/games/)
-  * [itch.io](rathippo.itch.io/space-chase)
+  * [my website](http://rathippo.sh/games/)
+  * [itch.io](https://rathippo.itch.io/space-chase)
