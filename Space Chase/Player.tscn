@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Weapon.tscn" type="PackedScene" id=2]
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( -0.154083, 0.154087 )
+collision_layer = 3
+script = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -3.24738, 1.39272 )
+polygon = PoolVector2Array( -20.5012, -20.6333, 19.8877, -20.6333, 42.7283, -0.299599, 21.8375, 12.792, -19.387, 13.9061 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( 40, -1.88555 )
+color = Color( 0.0431373, 0.14902, 0.462745, 1 )
+polygon = PoolVector2Array( -62.4454, 16.964, -21.2483, 16.0119, -38.8754, 0.695373, -22.7022, -17.3451, -63.1334, -17.3514, -50.2199, -1.01701 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -21.5444, 14.8927, 18.7416, 15.1216, 40.0291, 1.04439, 17.826, -18.9842, -23.3756, -18.8697 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+current = true
+
+[node name="Weapon" parent="." instance=ExtResource( 2 )]
+position = Vector2( -23.336, -0.517814 )
+rotation = 3.14159
+cooldown = -1
+texture = null

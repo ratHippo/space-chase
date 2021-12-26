@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Enemy.gd" type="Script" id=1]
+
+[node name="Enemy" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 1, 0, 0, 1 )
+polygon = PoolVector2Array( -35.2499, -20.8782, -12.6078, -20.8782, -0.620819, -1.43266, -14.4724, 16.681, -36.049, 15.6155 )
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+position = Vector2( 2.7288, 0.779045 )
+scale = Vector2( 1.12561, 1.14831 )
+build_mode = 1
+polygon = PoolVector2Array( -34.9835, -19.8127, -12.8742, -19.5463, -0.887207, -0.63353, -15.0052, 15.0827, -34.7171, 15.0827 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -35.5821, -20.378, -12.3524, -20.6473, -0.838608, -1.39031, -14.7764, 16.3181, -35.986, 15.5774 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color( 1, 0.494118, 0.00392157, 1 )
+polygon = PoolVector2Array( -12.2572, -21.185, -21.3941, -2.43525, -14.7317, 17.647, -36.5271, 17.3614, -28.7227, -2.05455, -35.385, -21.0898 )
+[connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]

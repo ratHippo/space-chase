@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Space Chase.wav-47f406ed624113849495903e3b3c4ef5.sample"
+
+[deps]
+
+source_file="res://Space Chase.wav"
+dest_files=[ "res://.import/Space Chase.wav-47f406ed624113849495903e3b3c4ef5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
